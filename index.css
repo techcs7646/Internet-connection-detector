@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+ 
+  .container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .connection-detector {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.2s ease-in-out;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+ 
+  .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .icon.online i {
+    color: #00ff00;
+    text-shadow: 0 0 20px #00ff00;
+  }
+  
+  .icon.offline i {
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000;
+  }
+  
+  
+  #status-title {
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+  
+  #status-text {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .connection-detector {
+      padding: 20px;
+      width: 95%;
+    }
+
+    .icon {
+      font-size: 40px;
+    }
+
+    #status-title {
+      font-size: 1.5rem;
+    }
+
+    #status-text {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .connection-detector {
+      max-width: 500px;
+      padding: 40px;
+    }
+
+    .icon {
+      font-size: 60px;
+    }
+
+    #status-title {
+      font-size: 2rem;
+    }
+
+    #status-text {
+      font-size: 1.2rem;
+    }
+  }
+  
